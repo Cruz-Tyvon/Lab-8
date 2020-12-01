@@ -1,10 +1,3 @@
-# TO CONFIGURE:
-# UPLOAD A IMAGE TO USE AS A FAVICON INTO THE 'TEMPLATES' FOLDER
-# THEN RENAME IT TO 'favicon.png'
-# IT WILL AUTOMATICALLY BE SET AS THE FAVICON
-# GOTO ALL OF THE HTML DOCUMENTS IN THE 'TEMPLATES' FOLDER AND EDIT THE TEXT.
-# TELL PEOPLE ABOUT YOUR SITE!
-# !!! UNTIL YOU UPLOAD A FAVICON YOU WILL GET AN ERROR IN THE CONSOLE !!!
 from flask import Flask, render_template, send_file
 app = Flask('app')
 
@@ -28,9 +21,9 @@ def style():
 def script():
   return send_file('templates/script.js')
 
-@app.route('/imgs/Dark_Mode.svg')
+@app.route('/imgs/favicon.png')
 def dark_mode_svg():
-  return send_file('templates/imgs/Dark_Mode.svg')
+  return send_file('templates/imgs/favicon.png')
 
 @app.route('/favicon.png')
 def favicon():
